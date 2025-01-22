@@ -1,0 +1,268 @@
+.Outer_homepage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: none;
+}
+
+.Main_menu:hover {
+  cursor: none;
+}
+.Home_page_name {
+  font-size: 8em; /* Adjusted size to balance readability and style */
+  color: #006aff; /* Deep blue as the primary color */
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0 auto;
+  max-width: 100%;
+  cursor: none;
+  text-shadow: 3px 3px 8px #0066ff, 0px 0px 12px #00aaff; /* Layered blue shadow for depth */
+  font-family: "Poppins", "Arial", sans-serif; /* Modern, clean font family */
+  opacity: 0.95; /* Slight transparency for a softer look */
+  background: linear-gradient(90deg, #003d99, #006aff, #00aaff); /* Blue gradient for text */
+  -webkit-background-clip: text; /* Vendor prefix for compatibility with WebKit browsers */
+  -moz-background-clip: text; /* Vendor prefix for compatibility with Mozilla browsers */
+  background-clip: text; /* Standard property */
+  -webkit-text-fill-color: transparent; /* Ensures gradient is visible for WebKit browsers */
+  transition: all 0.3s ease; /* Smooth hover effects */
+}
+
+/* Hover Effect */
+.Home_page_name:hover {
+  color: #00aaff; /* Bright blue for hover state */
+  text-shadow: 4px 4px 12px #0088ff, 0px 0px 18px #003d99; /* Enhanced blue glow */
+  transform: scale(1.1); /* Slight enlargement for hover */
+  opacity: 1; /* Fully visible on hover */
+}
+
+#personal_description {
+  font-size: 2em;
+  color: rgb(0, 183, 255);
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  margin: 5px auto;
+  max-width: 100%;
+  cursor: none;
+  opacity: 0.75;
+}
+
+.Grp_Button {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: center;
+}
+
+.Grp_Button a {
+  width: 20%;
+  color: #3cc1c9ff;
+  background: none;
+  border: 2px ridge #3cc1c9ff;
+  text-align: center;
+  padding: 0.5em 0.5em;
+  margin-top: 1.5em;
+  margin-left: 1em;
+  margin-right: 1em;
+  font-size: 1.2em;
+  transition-delay: 1s;
+  transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  outline-style: none;
+  flex-grow: 1;
+  border-radius: 25px;
+}
+
+.Grp_Button a:hover {
+  border-color: tomato;
+  color: tomato;
+  box-shadow: 0 0.5em 0.5em -0.5em;
+  border: 2px solid tomato;
+  transition-timing-function: ease-out;
+  cursor: pointer;
+}
+.Grp_Button a:focus {
+  border-color: tomato;
+  color: tomato;
+  box-shadow: 0 0.5em 0.5em -0.5em;
+  transition-timing-function: ease-out;
+}
+
+/* Updated cursor styling */
+#cursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255,255,255,0.8), rgba(0,0,0,0));
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5);
+  z-index: 9999;
+}
+
+#cursor::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Hover effect for specific elements */
+.Home_page_name:hover ~ #cursor {
+  transform: scale(5);
+  box-shadow: 0 0 20px rgba(186, 235, 255, 0.8), 0 0 30px rgba(179, 221, 255, 0.5);
+  background: rgba(186, 235, 255, 0.5);
+}
+
+#Home_page_title:hover ~ #cursor {
+  transform: scale(5);
+  box-shadow: 0 0 20px rgba(186, 255, 201, 0.8), 0 0 30px rgba(50, 205, 50, 0.5);
+  background: rgba(186, 255, 201, 0.5);
+}
+
+#personal_description:hover ~ #cursor {
+  transform: scale(5);
+  box-shadow: 0 0 20px rgba(186, 235, 255, 0.8), 0 0 30px rgba(70, 130, 180, 0.5);
+  background: rgba(186, 235, 255, 0.5);
+}
+
+
+
+/*For making cursor like a magnifying glass*/
+
+/* #cursor {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 3px solid slategray;
+  box-sizing: border-box;
+  transition: 0.1s;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  background: white;
+  mix-blend-mode: difference;
+}
+#cursor::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  width: 15px;
+  height: 5px;
+  background-color: slategray;
+  border-radius: 0 7.5px 7.5px 0;
+  mix-blend-mode: inclusion;
+  transform-origin: -40% 35%;
+  transform: translateX(100%) rotate(135deg);
+}
+
+.Home_page_name:hover ~ #cursor {
+  transform: scale(10);
+  transition-timing-function: ease;
+  border-radius: 50%;
+}
+
+#Home_page_title:hover ~ #cursor {
+  transition-timing-function: ease;
+  transform: scale(2);
+  border-color: ivory;
+  background: ivory;
+  mix-blend-mode: exclusion;
+} */
+#Home_page_title:hover {
+  opacity: 1;
+}
+#personal_description:hover {
+  opacity: 1;
+}
+
+/* #personal_description:hover ~ #cursor {
+  transform: scale(5);
+  transition-timing-function: ease;
+} */
+/* Experimental part */
+
+/* Displaying Projects part */
+#project_heading_text {
+  color: bisque;
+  font-size: 2em;
+  text-align: center;
+  margin: 20px;
+}
+.project_container {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+.project_card {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  border: 3px solid #3cc1c9ff;
+  border-radius: 5px;
+}
+.project_card > img {
+  object-fit: contain;
+  max-height: 400px;
+}
+.project_details_text {
+  font-size: 1.2em;
+  padding: 10px;
+  color: whitesmoke;
+}
+.project__links {
+  text-align: center;
+  padding: 10px;
+  font-size: 2em;
+}
+/* Ending displaying projects part */
+
+/*The below part is for making it mobile responsive*/
+
+/*768 px is the typical size of tabs*/
+@media screen and (max-width: 800px) {
+  .Home_page_name {
+    font-size: 7em;
+    max-width: 100%;
+  }
+  #cursor {
+    display: none;
+  }
+}
+
+/* 600 px is about the size of lagrge phones*/
+@media screen and (max-width: 600px) {
+  .Home_page_name {
+    font-size: 4em;
+    max-width: 100%;
+  }
+
+  #Home_page_title {
+    letter-spacing: 0.2em;
+    max-width: 100%;
+  }
+
+  #cursor {
+    display: none;
+  }
+
+  .Grp_Button a {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    padding: 5px;
+    max-width: 100px;
+  }
+}

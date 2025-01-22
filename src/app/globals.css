@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0; /* Text color for light mode */
+  --background-start-rgb: 200, 220, 255; /* Light blue gradient start */
+  --background-end-rgb: 240, 250, 255; /* Light blue gradient end */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 0, 0; /* Text color for dark mode */
+    --background-start-rgb: 10, 20, 40; /* Dark blue gradient start */
+    --background-end-rgb: 30, 40, 60; /* Dark blue gradient end */
+  }
+}
+
+body {
+  background: linear-gradient(
+    180deg,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+  color: rgb(var(--foreground-rgb)); /* Dynamically adapt text color */
+  min-height: 100vh; /* Ensure background covers the entire viewport */
+  margin: 0; /* Remove default browser margins */
+  font-family: "Poppins", sans-serif; /* Apply a modern font for consistency */
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
