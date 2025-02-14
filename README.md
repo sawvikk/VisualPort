@@ -1,6 +1,6 @@
 # Sawvik Kar Dipto's Portfolio (For software engineers)
 
-**[View the Live Portfolio](https://sakibshahon.netlify.app/)**
+**[View the Live Portfolio](https://sawvikvisdev.netlify.app/)**
 
 This is my software engineering portfolio. Its build using _Next.js_ with a lot of components build using _DaisyUI_'s components and _Tailwind CSS_. You're free to use this template and modify it however you see fit.
 
