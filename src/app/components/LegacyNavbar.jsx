@@ -30,3 +30,4 @@ const LegacyNavbar = () => {
 };
 
 export default LegacyNavbar;
+
